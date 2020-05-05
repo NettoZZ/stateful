@@ -2,10 +2,16 @@
 if (isset($_POST['task'])) {
     $texto = $_POST['task'];
   
-    $arquivo = fopen('task.txt', 'w');
-    fwrite($arquivo, $texto);
+    $arquivo = fopen('task.txt', 'a+');
+    fwrite($arquivo, $texto . "\n");
     fclose($arquivo);
 }
+?>
+<?php
+$arquivo = 'task.txt';
+$fp = fopen($arquivo,'r');
+$texto = fread($fp, filesize($arquivo));
+$texto = nl2br($texto);
 ?>
 
 <!DOCTYPE html>
@@ -24,17 +30,12 @@ if (isset($_POST['task'])) {
     <table>
         <thead>
             <tr>
-                <th>ID</th>
                 <th>Tarefas</th>
-                <th>Deletar</th>
             </tr>
         </thead>
         <tbody>
             <tr>
-                <td>1</th>
-                <td class= "tarefas">Comprar leite</th>
-                <td class="deletar">
-                <th><a href="#">X</a></th>
+                <td class= "task"><p class="teste"> <? echo mb_strtolower( $texto, 'UTF-8' ); ?> </p></th>
             </tr>
         </tbody>
     </table>
