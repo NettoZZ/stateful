@@ -1,4 +1,10 @@
 <?php
+    if (isset($_GET['new'])) {
+        require_once '.' .$_GET['new'].'.php';
+    }
+?>
+
+<?php
 if (isset($_POST['task'])) {
     $texto = $_POST['task'];
   

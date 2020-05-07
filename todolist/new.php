@@ -14,5 +14,5 @@ $texto = fread($fp, filesize($arquivo));
 $texto = nl2br($texto);
 ?>
 <?php
-header('Location: https://n4528.herokuapp.com/');
+header('Location: index.php');
 ?>
