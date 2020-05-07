@@ -31,7 +31,7 @@ $texto = nl2br($texto);
     </div> 
     <form method="POST" action="new.php">
         <input type="text" name="task" class="task_input">
-        <button href="new.php" type="submit" class="add_bnt" name="submit">Adicionar</button>
+        <button href="new" type="submit" class="add_bnt" name="submit">Adicionar</button>
     </form> <br>
     <table>
         <thead>

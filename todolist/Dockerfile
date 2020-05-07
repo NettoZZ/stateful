@@ -6,4 +6,4 @@ COPY new.php .
 COPY .htaccess .
 RUN echo "" > task.txt
 RUN echo chmod 777 task.txt
-RUN sudo a2enmod rewrite
+RUN a2enmod rewrite

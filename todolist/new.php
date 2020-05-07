@@ -14,5 +14,5 @@ $texto = fread($fp, filesize($arquivo));
 $texto = nl2br($texto);
 ?>
 <?php
-header('Location: index.php');
+header('Location: / ');
 ?>
